@@ -1,3 +1,5 @@
+github.com/fsnotify/fsnotify v1.7.0 h1:8JEhPFa5W2WU7YfeZzPNqzMP6Lwt7L2715Ggo0nosvA=
+github.com/fsnotify/fsnotify v1.7.0/go.mod h1:40Bi/Hjc2AVfZrqy+aj+yEI+/bRxZnMJyTJwOpGvigM=
 github.com/gen2brain/beeep v0.0.0-20240112042604-c7bb2cd88fea h1:oWUHxzaBvwkRWiINbBOY39XIF+n9b4RJEPHdQ8waJUo=
 github.com/gen2brain/beeep v0.0.0-20240112042604-c7bb2cd88fea/go.mod h1:0W7dI87PvXJ1Sjs0QPvWXKcQmNERY77e8l7GFhZB/s4=
 github.com/go-toast/toast v0.0.0-20190211030409-01e6764cf0a4 h1:qZNfIGkIANxGv/OqtnntR4DfOY2+BgwR60cAcu/i3SE=

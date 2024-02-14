@@ -2,13 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/gen2brain/beeep"
+	"log"
+	"os"
 )
 
 func main() {
-	err := beeep.Notify("Title", "Message body", "assets/information.png")
-	if err != nil {
-		panic(err)
+
+	args := os.Args
+	if len(args) < 2 {
+		log.Fatal("USAGE: notify_git_project PATH")
 	}
-	fmt.Println("Hello, World!")
+	path := args[1]
+	fmt.Println("path", path)
 }
