@@ -1,2 +1,3 @@
 /main
-/cmd/notify_git_project/.env
+/cmd/notifyGitProjectd/.env
+/cmd/notifyGitProjectd/notifyGitProjectd

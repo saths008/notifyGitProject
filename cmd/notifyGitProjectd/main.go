@@ -14,10 +14,9 @@ import (
 
 func startDaemon(client *github.Client, owner string, repoName string) {
 	lastTimeUpdate := time.Now()
-	<-time.Tick(time.Hour * 1)
 
 	for range time.Tick(time.Hour * 1) {
-		log.Println(fmt.Sprint("Sending "))
+		log.Println(fmt.Sprint("time channel tick..."))
 		lastPush, err := callGitHubAPI(client, owner, repoName)
 		if err != nil {
 			log.Fatal(err)
@@ -86,6 +85,11 @@ func notifyRepoUpdated(owner string, repoName string, timeOfUpdate time.Time) er
 }
 func main() {
 
+	args := os.Args
+	if len(args) != 3 {
+		log.Fatal("USAGE notifyGitProjectd owner repoName")
+	}
+	owner, repoName := args[1], args[2]
 	err := godotenv.Load()
 	if err != nil {
 		log.Fatal(err.Error())
@@ -94,8 +98,6 @@ func main() {
 	if !tokenIsDefined {
 		log.Fatal("Make sure GH_TOKEN is defined in the .env")
 	}
-	owner := "saths008"
-	repoName := "notifyGitProject"
 	client := github.NewClient(nil).WithAuthToken(GH_TOKEN)
 	log.Println("GitHub Client started.")
 	startDaemon(client, owner, repoName)

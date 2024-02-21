@@ -1,4 +1,4 @@
-module github.com/saths008/notify_git_project
+module github.com/saths008/notifyGitProjectd
 
 go 1.22.0
 
