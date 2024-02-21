@@ -1,8 +1,8 @@
-notifyGitProjectd
+# notifyGitProjectd
 
 This is a Linux daemon that checks every hour whether a github repository has been pushed to. A notification is sent every hour with the relevant information.
 
-##Set up
+## Set up
 
 1. Install the golang toolchain.
 2. In `cmd/notifyGitProjectd`, run `go build` to produce an executable named `notifyGitProjectd`.
